@@ -1,0 +1,58 @@
+Implement a program to read an array elements and print sum of all elements in an array which are ending with 3.
+
+Input Format
+
+size of the array and array elements
+
+Constraints
+
+no
+
+Output Format
+
+sum of all elements ending with 3
+
+Sample Input 0
+
+6
+1 2 3 11 12 13
+Sample Output 0
+
+16
+Sample Input 1
+
+5
+11 22 33 44 55 66
+Sample Output 1
+
+33
+
+import java.io.*;
+import java.util.*;
+
+public class Main{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int size = scanner.nextInt();
+
+        
+        int[] arr = new int[size];
+
+        for (int i = 0; i < size; i++) {
+            arr[i] = scanner.nextInt();
+        }
+
+        scanner.close();
+
+        int sum = 0;
+        for (int i = 0; i < size; i++) {
+            if (arr[i] % 10 == 3) {
+                sum += arr[i];
+            }
+        }
+
+     
+        System.out.println(sum);
+    }
+}

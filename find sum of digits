@@ -1,0 +1,52 @@
+Implement a program to find sum of digits present in the given number 'n'.
+
+Input Format
+
+an integer value from the user
+
+Constraints
+
+no
+
+Output Format
+
+sum of digits
+
+Sample Input 0
+
+123
+Sample Output 0
+
+6
+Sample Input 1
+
+192
+Sample Output 1
+
+12
+
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int sum=0;
+        int temp;
+        int n=sc.nextInt();
+        int x;
+        temp=n;
+       
+        while(temp>0)
+        {
+            x=temp%10;
+            sum=sum+x;
+            temp=temp/10;
+          
+        }
+          System.out.println(sum);
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}

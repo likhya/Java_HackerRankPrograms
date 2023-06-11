@@ -1,0 +1,75 @@
+Implement a program to update an element in the given array based on position
+
+Input Format
+
+size,array elements and element to be updated and location
+
+Constraints
+
+no
+
+Output Format
+
+return array after updating
+
+Sample Input 0
+
+5
+1 2 3 4 5
+2
+999
+Sample Output 0
+
+1 2 999 4 5
+Sample Input 1
+
+5
+1 2 3 4 5
+0
+888
+Sample Output 1
+
+888 2 3 4 5
+
+
+
+import java.io.*;
+import java.util.*;
+import java.util.Arrays;
+class Solution
+{
+    public static void updateAtLocation(int a[],int idx,int ele)
+    {
+        a[idx] = ele;
+    }
+    public static void updateElement(int a[],int old,int newe)
+    {
+        for(int i=0;i<a.length;i++)
+        {
+            if(a[i]==old)
+            {
+                a[i] = newe;
+                break;
+            }
+        }
+    }
+
+
+    public static void main(String[] args) 
+    {
+        Scanner sc=new Scanner(System.in);
+        int size=sc.nextInt();
+        int a[] = new int[size];
+        for(int i=0;i<size;i++)
+        {
+            a[i]=sc.nextInt();
+        }
+        int idx=sc.nextInt();
+        int ele=sc.nextInt();
+        
+        updateElement(a,idx+1,ele);
+         for (int num : a) {
+            System.out.print(num + " ");
+        }
+    }
+}

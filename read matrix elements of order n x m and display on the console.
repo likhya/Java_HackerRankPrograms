@@ -1,0 +1,72 @@
+Program to read matrix elements of order n x m and display on the console.
+
+Input Format
+
+A matrix of order n x m.
+
+Constraints
+
+no
+
+Output Format
+
+Print the same matrix
+
+Sample Input 0
+
+2
+2
+1 2
+3 4
+Sample Output 0
+
+1 2
+3 4
+Sample Input 1
+
+3
+3
+1 2 3
+4 5 6
+7 8 9
+Sample Output 1
+
+1 2 3
+4 5 6
+7 8 9
+
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+        int[][] c=new int[a][b];
+        int i;
+        int j;
+        for(i=0;i<a;i++)
+        {
+            for(j=0;j<b;j++)
+            {
+               c[i][j]=sc.nextInt();
+                
+            }
+          
+        }
+        for(i=0;i<a;i++)
+        {
+            for(j=0;j<b;j++)
+            {
+               System.out.print(c[i][j]+" ");
+                
+            }
+          System.out.println();
+        }
+    }
+}
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+ 
